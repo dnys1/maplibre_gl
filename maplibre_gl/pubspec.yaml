@@ -1,0 +1,27 @@
+name: maplibre_gl
+description: A new flutter plugin project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        default_package: maplibre_gl_web
+
+dependencies:
+  flutter:
+    sdk: flutter
+  maplibre_gl_platform_interface:
+    path: ../maplibre_gl_platform_interface
+  maplibre_gl_web:
+    path: ../maplibre_gl_web
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
