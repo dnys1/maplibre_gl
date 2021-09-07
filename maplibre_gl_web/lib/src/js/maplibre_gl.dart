@@ -50,6 +50,7 @@ class MaplibreMap {
 
   external void once(String type, Function listener);
   external void resize();
+  external void setCenter(Coordinates coordinates);
   external void triggerRepaint();
 }
 

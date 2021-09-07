@@ -28,7 +28,18 @@ class MaplibreMap extends StatefulWidget {
 
 class _MaplibreMapState extends State<MaplibreMap> {
   final _mapId = _nextMapCreationId++;
-  late final MaplibreGlController _controller;
+  MaplibreGlController? _controller;
+
+  @override
+  void didUpdateWidget(MaplibreMap oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    var center = widget.center;
+    var controller = _controller;
+    if (center != null && center != oldWidget.center && controller != null) {
+      controller.setCenter(center);
+      controller.addMarker(center);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +57,7 @@ class _MaplibreMapState extends State<MaplibreMap> {
     // Rebuild once the map has been drawn.
     _controller = MaplibreGlPlatform.instance.getController(id);
     if (widget.center != null) {
-      _controller.addMarker(widget.center!);
+      _controller!.addMarker(widget.center!);
     }
     // Future.delayed(const Duration(seconds: 2)).then((value) {
     //   SchedulerBinding.instance!.addPostFrameCallback((_) {

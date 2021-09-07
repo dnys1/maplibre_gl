@@ -88,4 +88,9 @@ class MaplibreGlController implements p.MaplibreGlController {
         .setLngLat(js.Coordinates(lat: coordinates.lat, lon: coordinates.lon))
         .addTo(_map);
   }
+
+  @override
+  void setCenter(p.Coordinates coordinates) {
+    _map.setCenter(js.Coordinates(lat: coordinates.lat, lon: coordinates.lon));
+  }
 }
