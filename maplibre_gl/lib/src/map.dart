@@ -15,12 +15,30 @@ class MaplibreMap extends StatefulWidget {
     this.zoom,
     this.style,
     this.transformRequestFunction,
+    this.customAttribution,
+    this.dragPan,
+    this.dragRotate,
+    this.doubleClickZoom,
+    this.hash,
+    this.fadeDuration,
+    this.failIfMajorPerformanceCaveat,
+    this.interactive,
+    this.keyboard,
   }) : super(key: key);
 
   final Coordinates? center;
   final int? zoom;
   final String? style;
   final TransformRequestFunction? transformRequestFunction;
+  final List<String>? customAttribution;
+  final bool? dragPan;
+  final bool? dragRotate;
+  final bool? doubleClickZoom;
+  final bool? hash;
+  final int? fadeDuration;
+  final bool? failIfMajorPerformanceCaveat;
+  final bool? interactive;
+  final bool? keyboard;
 
   @override
   State<MaplibreMap> createState() => _MaplibreMapState();
@@ -39,6 +57,15 @@ class _MaplibreMapState extends State<MaplibreMap> {
       transformRequestFunction: widget.transformRequestFunction,
       zoom: widget.zoom,
       style: widget.style,
+      customAttribution: widget.customAttribution,
+      dragPan: widget.dragPan,
+      dragRotate: widget.dragRotate,
+      doubleClickZoom: widget.doubleClickZoom,
+      hash: widget.hash,
+      fadeDuration: widget.fadeDuration,
+      failIfMajorPerformanceCaveat: widget.failIfMajorPerformanceCaveat,
+      interactive: widget.interactive,
+      keyboard: widget.keyboard,
     );
   }
 

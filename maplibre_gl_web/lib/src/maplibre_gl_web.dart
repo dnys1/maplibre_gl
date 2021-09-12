@@ -24,6 +24,15 @@ class MaplibreGlPlugin extends MaplibreGlPlatform {
     TransformRequestFunction? transformRequestFunction,
     int? zoom,
     String? style,
+    List<String>? customAttribution,
+    bool? dragPan,
+    bool? dragRotate,
+    bool? doubleClickZoom,
+    bool? hash,
+    int? fadeDuration,
+    bool? failIfMajorPerformanceCaveat,
+    bool? interactive,
+    bool? keyboard,
   }) {
     if (_mapById[creationId] != null) {
       return _mapById[creationId]!.widget;
@@ -35,6 +44,15 @@ class MaplibreGlPlugin extends MaplibreGlPlatform {
       transformRequestFunction: transformRequestFunction,
       zoom: zoom,
       style: style,
+      customAttribution: customAttribution,
+      dragPan: dragPan,
+      dragRotate: dragRotate,
+      doubleClickZoom: doubleClickZoom,
+      hash: hash,
+      fadeDuration: fadeDuration,
+      failIfMajorPerformanceCaveat: failIfMajorPerformanceCaveat,
+      interactive: interactive,
+      keyboard: keyboard,
     );
     _mapById[creationId] = controller;
 

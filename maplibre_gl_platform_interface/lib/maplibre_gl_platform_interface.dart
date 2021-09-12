@@ -32,6 +32,15 @@ abstract class MaplibreGlPlatform extends PlatformInterface {
     TransformRequestFunction? transformRequestFunction,
     int? zoom,
     String? style,
+    List<String>? customAttribution,
+    bool? dragPan,
+    bool? dragRotate,
+    bool? doubleClickZoom,
+    bool? hash,
+    int? fadeDuration,
+    bool? failIfMajorPerformanceCaveat,
+    bool? interactive,
+    bool? keyboard,
   }) {
     throw UnimplementedError('buildView() has not been implemented.');
   }

@@ -31,6 +31,15 @@ class MaplibreGlController implements p.MaplibreGlController {
     String? style,
     int? zoom,
     p.TransformRequestFunction? transformRequestFunction,
+    List<String>? customAttribution,
+    bool? dragPan,
+    bool? dragRotate,
+    bool? doubleClickZoom,
+    bool? hash,
+    int? fadeDuration,
+    bool? failIfMajorPerformanceCaveat,
+    bool? interactive,
+    bool? keyboard,
   })  : _mapId = mapId,
         _transformRequestFunction = transformRequestFunction {
     _div = DivElement()
@@ -45,6 +54,15 @@ class MaplibreGlController implements p.MaplibreGlController {
         style: style,
         zoom: zoom,
         transformRequest: allowInterop(_transformRequest),
+        customAttribution: customAttribution,
+        dragPan: dragPan,
+        dragRotate: dragRotate,
+        doubleClickZoom: doubleClickZoom,
+        hash: hash,
+        fadeDuration: fadeDuration,
+        failIfMajorPerformanceCaveat: failIfMajorPerformanceCaveat,
+        interactive: interactive,
+        keyboard: keyboard,
       ),
     );
     _map.once('load', allowInteropCaptureThis(($this, event) {
