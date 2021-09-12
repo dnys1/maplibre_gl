@@ -5,4 +5,5 @@ abstract class MaplibreGlController {
 
   void resize();
   void addMarker(Coordinates coordinates);
+  void setCenter(Coordinates coordinates);
 }
